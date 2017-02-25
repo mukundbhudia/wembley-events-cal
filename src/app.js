@@ -3,6 +3,8 @@ var xray = Xray();
 var ical = require('ical-generator'),
     http = require('http');
 
+var port = process.env.PORT || 5000;
+
 var sourceUrl = "https://www.brent.gov.uk/events-and-whats-on-calendar?eventCat=Wembley%20Stadium%20events";
 
 xray(sourceUrl, {
@@ -35,7 +37,7 @@ xray(sourceUrl, {
         });
         http.createServer(function(req, res) {
             cal.serve(res);
-        }).listen(5000, function() {
+        }).listen(port, function() {
             console.log('Server running at http://127.0.0.1:5000/');
         });
         cal.save('wemb-cal.ics', function(err, doc) {
