@@ -33,6 +33,11 @@ xray(sourceUrl, {
             timezone: 'Europe/London',
             events: events
         });
+        http.createServer(function(req, res) {
+            cal.serve(res);
+        }).listen(5000, '127.0.0.1', function() {
+            console.log('Server running at http://127.0.0.1:5000/');
+        });
         cal.save('wemb-cal.ics', function(err, doc) {
             if (err) {
                 console.error(err);
