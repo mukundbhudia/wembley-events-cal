@@ -20,7 +20,7 @@ xray(sourceUrl, {
             var eDate = new Date(eDateString[0]);
             var event = {
                 start: eDate,
-                allDay: true,
+                // allDay: true,
                 summary: content.events[i].title,
                 description: content.events[i].longDescription,
                 location: "Wembley Stadium"
