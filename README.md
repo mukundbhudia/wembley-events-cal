@@ -10,8 +10,8 @@ Not just yet, but hopefully soon.
 
 ### What you need before you run the app: ###
 
-* NodeJS version >= 6.3.x installed
-* npm version >= 3.10.x installed
+* NodeJS version >= 6.0.x installed
+* npm version >= 3.0.x installed
 
 ### How do I install? ###
 
