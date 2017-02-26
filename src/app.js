@@ -33,12 +33,14 @@ xray(sourceUrl, {
         var cal = ical({
             name: 'Wembley Stadium Events',
             timezone: 'Europe/London',
+            location: "Wembley Stadium",
+            description: "Wembley Stadium events calendar",
             events: events
         });
         http.createServer(function(req, res) {
             cal.serve(res);
         }).listen(port, function() {
-            console.log('Server running at http://127.0.0.1:5000/');
+            console.log('Server running at http://127.0.0.1:' + port + '/');
         });
         cal.save('wemb-cal.ics', function(err, doc) {
             if (err) {
