@@ -9,7 +9,7 @@
         "npm": "3.0.x"
     },
     "scripts": {
-        "start": "src/app.js"
+        "start": "node src/app.js"
     },
     "keywords": [
         "wembley",
