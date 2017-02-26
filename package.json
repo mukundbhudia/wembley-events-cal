@@ -5,8 +5,8 @@
     "description": "Makes an iCal for Wembley Events",
     "author": "Mukund Bhudia <mukund_bhudia@hotmail.co.uk>",
     "engines": {
-        "node": "6.3.x",
-        "npm": "3.10.x"
+        "node": "6.0.x",
+        "npm": "3.0.x"
     },
     "scripts": {
         "start": "src/app.js"
