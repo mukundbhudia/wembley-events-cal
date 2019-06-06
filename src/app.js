@@ -35,7 +35,7 @@ xray(sourceUrl, {
             description: "Wembley Stadium events calendar",
             events: events
         });
-        cal.save('wemb-cal.ics', function(err, doc) {
+        cal.save('cals/wemb-cal.ics', function(err, doc) {
             if (err) {
                 console.error(err);
             } else {
@@ -81,7 +81,7 @@ xray(sourceUrl, {
             description: "Wembley Stadium events calendar",
             events: events
         });
-        cal.save('arena-cal.ics', function(err, doc) {
+        cal.save('cals/arena-cal.ics', function(err, doc) {
             if (err) {
                 console.error(err);
             } else {
