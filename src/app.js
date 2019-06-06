@@ -35,7 +35,7 @@ xray(sourceUrl, {
             description: "Wembley Stadium events calendar",
             events: events
         });
-        cal.save('cals/wemb-cal.ics', function(err, doc) {
+        cal.save('cals/stadium-cal.ics', function(err, doc) {
             if (err) {
                 console.error(err);
             } else {
@@ -75,10 +75,10 @@ xray(sourceUrl, {
         }
         console.log(events.length + " events found");
         var cal = ical({
-            name: 'Wembley Stadium Events',
+            name: 'SSE Arena Wembley Events',
             timezone: 'Europe/London',
-            location: "Wembley Stadium",
-            description: "Wembley Stadium events calendar",
+            location: "SSE Arena Wembley",
+            description: "SSE Arena Wembley events calendar",
             events: events
         });
         cal.save('cals/arena-cal.ics', function(err, doc) {

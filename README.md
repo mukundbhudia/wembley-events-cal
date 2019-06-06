@@ -1,5 +1,10 @@
 # wembley-events-cal #
 
+Subscriptions:
+Wembley Stadium: https://flamingspaz.github.io/wembley-events-cal/stadium-cal.ics
+SSE Arena Wembley: https://flamingspaz.github.io/wembley-events-cal/arena-cal.ics
+
+
 ### What is this? ###
 
 Plan ahead, avoid the rush, get a calendar of upcoming events at Wembley Stadium
