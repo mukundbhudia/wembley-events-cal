@@ -51,27 +51,31 @@ var sourceUrl = "https://www.ssearena.co.uk/events";
 
 xray(sourceUrl, {
     pageTitle: 'title',
-        events: xray('div.entry', [{
+        events: xray('div#list', [{
         title: 'h3',
-        date: 'div.date',
-        description: 'Not Available',
-        longDescription: 'div.details',
+        startDay: 'span.m-date__rangeFirst > span.m-date__day',
+        endDay: 'span.m-date__rangeLast > span.m-date__day',
+        month: 'span.m-date__month',
+        year: 'span.m-date__year',
+        description: 'Not Available'
     }])
 })(function(err, content) {
     if (content) {
         var events = [];
-        for (var i = 0; i < content.events.length; i++) {
-            var eDateString = content.events[i].date.trim();
-            var eDate = new Date(eDateString);
-            var event = {
-                start: eDate,
-                allDay: true,
-                summary: content.events[i].title.trim(),
-                description: content.events[i].longDescription.trim().split('…')[0] + '...',
-                location: "SSE Arena Wembley"
-            };
-            events.push(event);
-            console.log(event)
+        for (const eventListing of content.events) {
+                for (var j = parseInt(eventListing.startDay); j <= parseInt(eventListing.endDay); j++) {
+                    var eDateString = j + " " + eventListing.month + " " + eventListing.year;
+                    var eDate = new Date(eDateString);
+                    var event = {
+                        start: eDate,
+                        allDay: true,
+                        summary: eventListing.title.trim(),
+                        description: 'Not available',
+                        location: "SSE Arena Wembley"
+                    };
+                    events.push(event);
+                    console.log(event)
+                }
         }
         console.log(events.length + " events found");
         var cal = ical({
