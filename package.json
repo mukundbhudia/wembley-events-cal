@@ -3,7 +3,7 @@
     "version": "0.0.0",
     "private": true,
     "description": "Makes an iCal for Wembley Events",
-    "author": "Mukund Bhudia <mukund_bhudia@hotmail.co.uk>",
+    "author": "Mukund Bhudia <mukund_bhudia@hotmail.com>",
     "engines": {
         "node": "6.0.x",
         "npm": "3.0.x"
@@ -18,7 +18,7 @@
         "calendar"
     ],
     "dependencies": {
-        "x-ray": "^2.3.2",
-        "ical-generator": "^0.2.9"
+        "x-ray": "^2.3.4",
+        "ical-generator": "^1.12.0"
     }
 }
