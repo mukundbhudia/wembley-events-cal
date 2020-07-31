@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - "7"
+install:
+  - npm install
+script:
+  - npm start
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  keep_history: false
+  local_dir: "cals/"
+  on:
+    branch: master
